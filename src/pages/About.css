@@ -1,0 +1,122 @@
+.about {
+  min-height: calc(100vh - 70px);
+  padding: 40px 16px 48px;
+  display: grid;
+  gap: 28px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.about__hero {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+}
+
+.about__badge {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  margin-bottom: 14px;
+}
+
+.about__title {
+  font-size: 38px;
+  line-height: 1.05;
+  margin: 0 0 10px;
+}
+
+.about__subtitle {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 70ch;
+}
+
+.about__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--primary {
+  background: rgba(255,255,255,0.9);
+  color: #111;
+}
+
+.btn--ghost {
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
+  border-color: rgba(255,255,255,0.14);
+}
+
+.btn:hover {
+  opacity: 0.92;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 720px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+  .about__title {
+    font-size: 32px;
+  }
+}
+
+.card {
+  border-radius: 16px;
+  padding: 16px 16px 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.card__title {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.card__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.about__footer {
+  opacity: 0.85;
+  font-size: 13px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
