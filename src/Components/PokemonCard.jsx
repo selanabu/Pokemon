@@ -1,5 +1,6 @@
 import "./PokemonCard.css";
 import { useTrainer } from "../context/TrainerContext";
+import "./RadarBoard.css";
 
 export default function PokemonCard({ pokemon }) {
 const { capture, release, captured } = useTrainer();

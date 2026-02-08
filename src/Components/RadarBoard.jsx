@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { bioMe } from "../utils/api";
 import PokemonCard from "./PokemonCard.jsx"; 
-import "./PokemonCard.css";
+import "./RadarBoard.css";
 
 
 export default function RadarBoard({ biome }) {
@@ -33,24 +33,29 @@ export default function RadarBoard({ biome }) {
 
   return (
     <section className="radar">
-      <input
-        ref={searchRef}
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        placeholder="Search Pokémon..."
-        className="radar__input"
-      />
+  <header className="radar__header">
+    <h2 className="radar__title">Radar Scan</h2>
 
+    <input
+      ref={searchRef}
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+      placeholder="Search Pokémon..."
+      className="radar__input"
+    />
+  </header>
 
-      {!error && filteredPokemon.length === 0 && (
-        <p>No Pokémon found</p>
-      )}
+  {!error && filteredPokemon.length === 0 && (
+    <p>No Pokémon found</p>
+  )}
 
-      <div className="grid">
-        {filteredPokemon.map((p) => (
-          <PokemonCard key={p.id} pokemon={p} />
-        ))}
-      </div>
-    </section>
-  );
+  <section className="cards">
+    {filteredPokemon.map((p) => (
+      <PokemonCard key={p.id} pokemon={p} />
+    ))}
+  </section>
+</section>
+
+  )
+    
 }

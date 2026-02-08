@@ -1,0 +1,28 @@
+.game-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 18px;
+  margin-top: 18px;
+  align-items: stretch;
+}
+
+
+.game-main {
+  min-width: 0;
+}
+
+.game-captured {
+  width: 340px;
+  position: static;
+}
+
+@media (max-width: 900px) {
+  .game-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .game-captured {
+    width: auto;
+    position: static;
+  }
+}
