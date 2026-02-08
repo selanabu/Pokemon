@@ -1,0 +1,27 @@
+.topbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+.topbar__label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.topbar__input,
+.topbar__select {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+.topbar__badge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.2);
+}
