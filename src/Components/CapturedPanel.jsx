@@ -20,28 +20,17 @@ export default function CapturedPanel() {
       </header>
 
       {captured.length === 0 ? (
-        <div className="pokedex__empty">
-          No Pokémon captured yet. Click <b>Capture</b> on a card to add it here.
+        <div>
+          No Pokémon captured yet
         </div>
       ) : (
         <ul className="pokedex__list">
           {captured.map((p) => (
             <li className="pokedex__item" key={p.id ?? p.name}>
               <div className="pokedex__left">
-                {p.image ? (
-                  <img className="pokedex__img" src={p.image} alt={p.name} />
-                ) : (
-                  <div className="pokedex__img pokedex__img--placeholder" />
-                )}
-
-                <div className="pokedex__meta">
+                
                   <div className="pokedex__name">{p.name}</div>
-                  {p.types?.length ? (
-                    <div className="pokedex__types">
-                      {p.types.join(", ")}
-                    </div>
-                  ) : null}
-                </div>
+                  
               </div>
 
               <button

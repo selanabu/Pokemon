@@ -45,9 +45,7 @@ export default function About() {
         </div>
       </div>
 
-      <footer className="about__footer">
-        <span>Tip:</span> Try switching biomes to see how the radar results change.
-      </footer>
+    
     </section>
   );
 }
